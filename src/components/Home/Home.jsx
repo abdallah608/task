@@ -26,9 +26,9 @@ const [news, setNews] = useState([])
     <div className="row gy-5 gx-5 mb-5">
     
     {news.map((item , index)=>
-        <div key={index} className="col-md-3">
+        <div key={index} className="col-md-3 position-relative">
           
-          <div className="item position-relative">
+          <div className="item ">
             {item.attributes.media_type == "video"? 
             <video style={{ width: 400, height: 300 }}  controls className='w-100 ' src={`${item.attributes.media_url}`}></video>
             :
@@ -36,6 +36,15 @@ const [news, setNews] = useState([])
             }
           </div>
           
+          <div className="position-absolute bottom-0 mx-3">
+          <ul className="list-unstyled d-flex">
+                  {item.attributes.topics.map((topic,index) => (
+                    <li key={index} className="bg-warning me-3 p-2 rounded-5 text-lead">{topic.name}</li>
+                  ))}
+                </ul>
+                <p className='text-warning fw-bolder'>{item.attributes.title} </p>
+          
+          </div>
         </div>
       )}
 

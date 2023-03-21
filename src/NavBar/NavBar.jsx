@@ -35,10 +35,10 @@ export default function NavBar() {
         </li>
         
       </ul>
-    <div className="d-flex justify-content-center align-items-center">
+    <div className="d-flex justify-content-center align-items-center text-white">
     
     
-          <NavLink className="nav-link" href="#"> <i className="fa-solid fa-cart-shopping me-2" />Cart</NavLink>
+          <NavLink className="nav-link " href="#"> <i className="fa-solid fa-cart-shopping me-2" />Cart</NavLink>
         
     </div>
 
